@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Siwar_Models</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="welcome_string">,, BIENVENU CHEZ</string>
+    <string name="siwar_string">Siwar\n    Models ,,</string>
+    <string name="username_hint_string">Session</string>
+    <string name="password_hint_string">Mot de passe</string>
+    <string name="singin_btn_string">Connecter </string>
+    <string name="desig_by_string">DESIGNER PAR \n ATEF and MARIEM</string>
+
+    <string name="title_activity_menu">Menu</string>
+
+    <string name="navigation_drawer_open">Ovrir navigation </string>
+    <string name="navigation_drawer_close">Fermer navigation</string>
+
+    <string name="title_activity_client">Client</string>
+    <string name="addclient_string">Ajouter Nouveau Client</string>
+    <string name="Cin_hint_string">CIN</string>
+    <string name="nameclt_hint_string">Nom Client</string>
+    <string name="adresclt_hint_string">Adresse</string>
+    <string name="teleclt_hint_string">Télèphone</string>
+
+    <string name="title_activity_robe">Robe</string>
+    <string name="addrobe_string">Ajouter Nouveau Robe</string>
+    <string name="numrobe_sting">N° Robe</string>
+    <string name="desg_hint_string">Designation</string>
+    <string name="prix_hint_string">Prix Total</string>
+
+    <string name="title_activity_operations">operations</string>
+    <string name="addoperation_string">Ajouter Nouveau Operations</string>
+    <string name="numop_hint_string">Num Operation</string>
+    <string name="opcllt_hint_string">CIN</string>
+    <string name="oprobe_hint_string">N° Robe</string>
+    <string name="datedeb_hint_string">Date Debut</string>
+    <string name="avance_hint_string">Avance</string>
+
+    <string name="title_activity_retour">Retour</string>
+    <string name="retour_string">Retour Client</string>
+    <string name="reste_hint_string">Reste</string>
+    <string name="erreur_Username">Remplir Session</string>
+    <string name="erreur_Password">Remplir Mot de passe</string>
+    <string name="erreur_invalid">Session ou Mot de passe est incorrecte</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

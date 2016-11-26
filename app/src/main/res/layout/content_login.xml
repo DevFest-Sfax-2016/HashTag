@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.daoud.siwar_models.Login"
+    android:background="@android:color/holo_blue_light"
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/WelcomeView"
+        android:text="@string/welcome_string"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
+        />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="4"
+            android:layout_below="@+id/WelcomeView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/siwar_string"
+                android:textColor="@android:color/white"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:gravity="center"
+            android:baselineAligned="false"
+            android:id="@+id/linearLayout"
+            android:layout_above="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="63dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="165dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/editTextUsername"
+                    android:hint="@string/username_hint_string"
+                    android:drawableRight="@drawable/user_ic"
+                    android:background="@drawable/edit_bg"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/editTextPassword"
+                    android:hint="@string/password_hint_string"
+                    android:drawableRight="@drawable/lock_ic"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPassword"
+                    android:background="@drawable/edit_bg"/>
+
+                <Button
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="@string/singin_btn_string"
+                    android:id="@+id/buttonSing"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/haha_h"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/desig_by_string"
+             android:textColor="@android:color/white"
+             android:textSize="20sp"
+             android:textStyle="bold"
+             android:background="@android:color/holo_blue_dark"
+             android:padding="5dp"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true"
+             android:id="@+id/textView2" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

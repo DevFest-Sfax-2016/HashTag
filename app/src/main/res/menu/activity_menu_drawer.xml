@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_robe"
+            android:icon="@drawable/ic_robe"
+            android:title="Robes" />
+        <item
+            android:id="@+id/nav_client"
+            android:icon="@drawable/ic_client"
+            android:title="Clients" />
+        <item
+            android:id="@+id/nav_operation"
+            android:icon="@drawable/ic_operation"
+            android:title="Operations" />
+        <item
+            android:id="@+id/nav_retour"
+            android:icon="@drawable/ic_retour"
+            android:title="Retours" />
+        <item
+            android:id="@+id/nav_recherche"
+            android:icon="@drawable/ic_recherche"
+            android:title="Recherches" />
+        <item
+            android:id="@+id/nav_chif_affaire"
+            android:icon="@drawable/ic_affaire"
+            android:title="Chiffres d'affaires" />
+        <item
+            android:id="@+id/nav_stat"
+            android:icon="@drawable/ic_satistique"
+            android:title="Statistiques" />
+
+    </group>
+
+</menu>
