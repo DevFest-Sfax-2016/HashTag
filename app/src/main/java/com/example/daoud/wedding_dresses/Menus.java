@@ -1,5 +1,6 @@
 package com.example.daoud.wedding_dresses;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +18,7 @@ import com.example.daoud.fragment.HomeFragment;
 import com.example.daoud.fragment.OperationFragment;
 import com.example.daoud.fragment.RetourFragment;
 import com.example.daoud.fragment.RobeFragment;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Menus extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -66,15 +68,21 @@ public class Menus extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.icHome) {
-            Fragment fragment = HomeFragment.newInstance(0);
+            signOut();
+           /* Fragment fragment = HomeFragment.newInstance(0);
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.container, fragment)
                     .commit();
-            return true;
+            return true;*/
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    private void signOut() {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(this, Login.class));
+        finish();
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
