@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
 import com.example.daoud.model.Robe;
 import com.example.daoud.wedding_dresses.R;
 import com.example.daoud.task.InsertRobeTask;
@@ -16,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 /* * A placeholder fragment containing a simple view.
  */
-public  class RobeFragment extends Fragment {
+public class RobeFragment extends Fragment {
     /**
      * The fragment argument representing the section number for this
      * fragment.
@@ -51,14 +53,14 @@ public  class RobeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_robe, container, false);
-        editTextDress=(EditText)rootView.findViewById(R.id.editTextDress);
-        editTextDesig=(EditText)rootView.findViewById(R.id.editTextDesig);
-        editTextPrix=(EditText)rootView.findViewById(R.id.editTextPrix);
+        editTextDress = (EditText) rootView.findViewById(R.id.editTextDress);
+        editTextDesig = (EditText) rootView.findViewById(R.id.editTextDesig);
+        editTextPrix = (EditText) rootView.findViewById(R.id.editTextPrix);
 
-        imagebuttonAjout=(ImageButton)rootView.findViewById(R.id.imageButtonAjout);
-        imagebuttonModif=(ImageButton)rootView.findViewById(R.id.imageButtonModif);
-        imagebuttonSupp=(ImageButton)rootView.findViewById(R.id.imageButtonSupp);
-        imagebuttonAffiche=(ImageButton)rootView.findViewById(R.id.imagebuttonAffiche);
+        imagebuttonAjout = (ImageButton) rootView.findViewById(R.id.imageButtonAjout);
+        imagebuttonModif = (ImageButton) rootView.findViewById(R.id.imageButtonModif);
+        imagebuttonSupp = (ImageButton) rootView.findViewById(R.id.imageButtonSupp);
+        imagebuttonAffiche = (ImageButton) rootView.findViewById(R.id.imagebuttonAffiche);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         imagebuttonAjout.setOnClickListener(new View.OnClickListener() {
@@ -68,9 +70,14 @@ public  class RobeFragment extends Fragment {
                 tmpRobe.setNumrobe(editTextDress.getText().toString());
                 tmpRobe.setDesignation(editTextDesig.getText().toString());
                 tmpRobe.setPrixtotal(Integer.parseInt(editTextPrix.getText().toString()));*/
-                int  aux = Integer.parseInt(editTextPrix.getText().toString());
-        writeNewUser(editTextDress.getText().toString(), editTextDesig.getText().toString(),aux);
-            //    new InsertRobeTask(getActivity(),tmpRobe).execute();
+                if (!editTextPrix.getText().toString().isEmpty() && !editTextDress.getText().toString().isEmpty() && editTextDesig.getText().toString().isEmpty()) {
+                    int aux = Integer.parseInt(editTextPrix.getText().toString());
+                    writeNewUser(editTextDress.getText().toString(), editTextDesig.getText().toString(), aux);
+                } else {
+                    Toast.makeText(getContext().getApplicationContext(), "Verifier les champs", Toast.LENGTH_LONG).show();
+                }
+
+                //    new InsertRobeTask(getActivity(),tmpRobe).execute();
 
             }
         });
@@ -82,7 +89,7 @@ public  class RobeFragment extends Fragment {
                 tmpRobe.setDesignation(editTextDesig.getText().toString());
                 tmpRobe.setPrixtotal(Integer.parseInt(editTextPrix.getText().toString()));
 
-                new UpdateRobeTask(getActivity(),tmpRobe);
+                new UpdateRobeTask(getActivity(), tmpRobe);
             }
         });
         imagebuttonSupp.setOnClickListener(new View.OnClickListener() {
@@ -99,8 +106,9 @@ public  class RobeFragment extends Fragment {
         });
         return rootView;
     }
+
     private void writeNewUser(String numrobe, String designation, int prixtotal) {
-        Robe robe = new  Robe( numrobe,  designation, prixtotal);
+        Robe robe = new Robe(numrobe, designation, prixtotal);
 
         mDatabase.child("users").push().setValue(robe);
         //    mDatabase.child("users").push().setValue(user);
