@@ -1,4 +1,4 @@
-package com.example.daoud.siwar_models;
+package com.example.daoud.wedding_dresses;
 
 import org.junit.Test;
 

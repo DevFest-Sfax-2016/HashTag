@@ -3,14 +3,11 @@ package com.example.daoud.task;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.daoud.adapter.RobeAdapter;
 import com.example.daoud.model.Robe;
-import com.example.daoud.siwar_models.R;
+import com.example.daoud.wedding_dresses.R;
 import com.example.daoud.util.HostServer;
 import com.example.daoud.util.JSONParser;
 

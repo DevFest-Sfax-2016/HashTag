@@ -8,8 +8,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import com.example.daoud.model.Robe;
-import com.example.daoud.siwar_models.R;
-import com.example.daoud.task.DeleteRobeTask;
+import com.example.daoud.wedding_dresses.R;
 import com.example.daoud.task.InsertRobeTask;
 import com.example.daoud.task.UpdateRobeTask;
 /* * A placeholder fragment containing a simple view.

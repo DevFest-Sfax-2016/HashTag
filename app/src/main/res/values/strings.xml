@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Siwar_Models</string>
+    <string name="app_name">Wedding dresses</string>
     <string name="action_settings">Paramètres</string>
     <string name="welcome_string">,, BIENVENU CHEZ</string>
-    <string name="siwar_string">Siwar\n    Models ,,</string>
+    <string name="siwar_string">Wedding\n    dresses ,,</string>
     <string name="username_hint_string">Session</string>
     <string name="password_hint_string">Mot de passe</string>
     <string name="singin_btn_string">Connecter </string>
-    <string name="desig_by_string">DESIGNER PAR \n ATEF and MARIEM</string>
+    <string name="singup_btn_string">Creer un compte </string>
+    <string name="desig_by_string">DESIGNER PAR \n #HashTag</string>
 
     <string name="title_activity_menu">Menu</string>
 

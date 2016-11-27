@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.daoud.siwar_models">
+    package="com.example.daoud.wedding_dresses">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Login"
+            android:name="com.example.daoud.wedding_dresses.Login"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Menus"
+            android:name="com.example.daoud.wedding_dresses.Menus"
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

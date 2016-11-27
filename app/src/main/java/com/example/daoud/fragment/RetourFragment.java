@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.example.daoud.siwar_models.R;
+import com.example.daoud.wedding_dresses.R;
 
 
 /* * A placeholder fragment containing a simple view.

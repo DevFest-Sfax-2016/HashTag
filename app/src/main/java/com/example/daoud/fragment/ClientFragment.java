@@ -9,9 +9,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.example.daoud.model.Client;
-import com.example.daoud.siwar_models.R;
+import com.example.daoud.wedding_dresses.R;
 import com.example.daoud.task.DeleteClientTask;
-import com.example.daoud.task.DeleteOperationTask;
 import com.example.daoud.task.InsertClientTask;
 import com.example.daoud.task.UpdateClientTask;
 

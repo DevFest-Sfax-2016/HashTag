@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.daoud.siwar_models.R;
+import com.example.daoud.wedding_dresses.R;
 
 /**
  * A simple {@link Fragment} subclass.

@@ -4,19 +4,15 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.example.daoud.model.Client;
-import com.example.daoud.siwar_models.Menus;
-import com.example.daoud.siwar_models.R;
+import com.example.daoud.wedding_dresses.Menus;
 import com.example.daoud.util.HostServer;
 import com.example.daoud.util.JSONParser;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 

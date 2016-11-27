@@ -3,23 +3,13 @@ package com.example.daoud.task;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.Toast;
 
-import com.example.daoud.adapter.ClientAdapter;
-import com.example.daoud.model.Client;
 import com.example.daoud.model.Operation;
-import com.example.daoud.siwar_models.R;
 import com.example.daoud.util.HostServer;
 import com.example.daoud.util.JSONParser;
 
 import org.apache.http.NameValuePair;
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
