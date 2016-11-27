@@ -11,6 +11,9 @@ import com.example.daoud.model.Robe;
 import com.example.daoud.wedding_dresses.R;
 import com.example.daoud.task.InsertRobeTask;
 import com.example.daoud.task.UpdateRobeTask;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 /* * A placeholder fragment containing a simple view.
  */
 public  class RobeFragment extends Fragment {
@@ -20,6 +23,7 @@ public  class RobeFragment extends Fragment {
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
     EditText editTextDress;
+    private DatabaseReference mDatabase;
     EditText editTextDesig;
     EditText editTextPrix;
 
@@ -56,16 +60,17 @@ public  class RobeFragment extends Fragment {
         imagebuttonSupp=(ImageButton)rootView.findViewById(R.id.imageButtonSupp);
         imagebuttonAffiche=(ImageButton)rootView.findViewById(R.id.imagebuttonAffiche);
 
-
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         imagebuttonAjout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Robe tmpRobe = new Robe();
+               /* Robe tmpRobe = new Robe();
                 tmpRobe.setNumrobe(editTextDress.getText().toString());
                 tmpRobe.setDesignation(editTextDesig.getText().toString());
-                tmpRobe.setPrixtotal(Integer.parseInt(editTextPrix.getText().toString()));
-
-                new InsertRobeTask(getActivity(),tmpRobe).execute();
+                tmpRobe.setPrixtotal(Integer.parseInt(editTextPrix.getText().toString()));*/
+                int  aux = Integer.parseInt(editTextPrix.getText().toString());
+        writeNewUser(editTextDress.getText().toString(), editTextDesig.getText().toString(),aux);
+            //    new InsertRobeTask(getActivity(),tmpRobe).execute();
 
             }
         });
@@ -94,6 +99,13 @@ public  class RobeFragment extends Fragment {
         });
         return rootView;
     }
+    private void writeNewUser(String numrobe, String designation, int prixtotal) {
+        Robe robe = new  Robe( numrobe,  designation, prixtotal);
 
+        mDatabase.child("users").push().setValue(robe);
+        //    mDatabase.child("users").push().setValue(user);
+
+
+    }
 }
 
